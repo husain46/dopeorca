@@ -31,7 +31,8 @@
       body { background: var(--bg); color: var(--txt); font-family: var(--font-body); line-height: 1.6; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
       img { max-width: 100%; display: block; }
       a { text-decoration: none; color: inherit; }
-      button { cursor: pointer; border: none; background: none; font-family: inherit; }
+      button { cursor: pointer; border: none; background: none; font-family: inherit; touch-action: manipulation; }
+      a, button { -webkit-tap-highlight-color: transparent; }
 
       body::before {
         content: ""; position: fixed; inset: 0;
@@ -66,7 +67,7 @@
       .theme-btn:hover { background: var(--surface2); color: var(--txt); }
       .hamburger { display: none; flex-direction: column; gap: 4px; width: 34px; height: 34px; border-radius: 8px; border: 1px solid var(--bdr2); background: var(--surface); align-items: center; justify-content: center; padding: 8px; }
       .hamburger span { display: block; width: 16px; height: 1.5px; background: var(--txt); border-radius: 2px; transition: all 0.3s; }
-      .mobile-menu { display: none; position: fixed; top: 65px; left: 0; right: 0; z-index: 899; background: var(--bg2); border-bottom: 1px solid var(--bdr); padding: 16px 24px 20px; }
+      .mobile-menu { display: none; position: fixed; top: 61px; left: 0; right: 0; z-index: 899; background: var(--bg2); border-bottom: 1px solid var(--bdr); padding: 16px 24px 20px; max-height: calc(100vh - 61px); overflow-y: auto; }
       .mobile-menu.open { display: block; }
       .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
       .mobile-menu ul a { display: block; padding: 10px 14px; border-radius: 8px; font-size: 15px; color: var(--txt2); font-weight: 500; transition: background 0.2s, color 0.2s; }
@@ -235,6 +236,9 @@
 
       /* RESPONSIVE */
       @media (max-width: 1024px) {
+        .nav-links { display: none; }
+        .hamburger { display: flex; }
+        .btn-nav.desktop { display: none; }
         .profile-overview-grid { grid-template-columns: repeat(2, 1fr); }
         .stats-bar { grid-template-columns: repeat(3, 1fr); }
         .services-grid { grid-template-columns: repeat(2, 1fr); }
@@ -243,11 +247,11 @@
         .footer-grid { grid-template-columns: 1fr 1fr; }
       }
       @media (max-width: 768px) {
-        .nav-links { display: none; }
-        .hamburger { display: flex; }
-        .btn-nav.desktop { display: none; }
         .section { padding: 72px 0; }
-        .profile-header-top { flex-direction: column; gap: 20px; }
+        .profile-page-header { padding: 100px 0 40px; }
+        .profile-header-top { flex-direction: column; gap: 16px; }
+        .profile-logo { width: 56px; height: 56px; font-size: 1.6rem; }
+        .profile-company-name { font-size: 1.6rem; }
         .profile-overview-grid { grid-template-columns: repeat(2, 1fr); }
         .stats-bar { grid-template-columns: repeat(3, 1fr); }
         .services-grid { grid-template-columns: 1fr; }
@@ -257,15 +261,36 @@
         .markets-grid { grid-template-columns: 1fr 1fr; }
         .footer-grid { grid-template-columns: 1fr 1fr; }
         .section-header-row { flex-direction: column; align-items: flex-start; }
-        .vision-block { padding: 36px 24px; }
+        .vision-block { padding: 32px 20px; }
+        .vision-text { font-size: 1rem; }
+        .vision-targets { gap: 8px; }
+        .contact-details-card, .markets-card { padding: 24px 20px; }
+        .cta-btns { flex-direction: column; align-items: center; }
+        .svc-card { padding: 28px 20px; }
+        .profile-meta-row { gap: 6px; }
       }
       @media (max-width: 480px) {
+        .section { padding: 56px 0; }
+        .container { padding: 0 16px; }
         .profile-overview-grid { grid-template-columns: 1fr 1fr; }
         .stats-bar { grid-template-columns: repeat(2, 1fr); }
+        .stat-value { font-size: 1.3rem; }
         .profile-industries-grid { grid-template-columns: repeat(2, 1fr); }
         .process-5 { grid-template-columns: 1fr; }
         .p5-step::after { display: none; }
         .footer-grid { grid-template-columns: 1fr; }
+        .section-h { font-size: 1.75rem; }
+        .profile-company-name { font-size: 1.35rem; }
+        .profile-meta-tag { font-size: 11px; padding: 4px 8px; }
+        .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+        .profile-ov-item { padding: 14px 12px; }
+        .profile-ov-value { font-size: 12.5px; }
+      }
+      @media (max-width: 360px) {
+        .section-h { font-size: 1.5rem; }
+        .stats-bar { grid-template-columns: 1fr 1fr; }
+        .markets-grid { grid-template-columns: 1fr; }
+        .vision-text { font-size: 0.95rem; }
       }
     </style>
   </head>
