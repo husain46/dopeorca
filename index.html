@@ -215,6 +215,39 @@
     .footer-legal a{font-size:12.5px;color:var(--txt3);transition:color 0.2s}
     .footer-legal a:hover{color:var(--txt2)}
 
+    /* FOUNDER */
+    .founder-section{background:var(--bg);border-top:1px solid var(--bdr)}
+    .founder-inner{display:grid;grid-template-columns:420px 1fr;gap:72px;align-items:center}
+    .founder-photo-wrap{position:relative;flex-shrink:0}
+    .founder-photo-wrap::before{content:"";position:absolute;inset:-2px;border-radius:14px;background:linear-gradient(135deg,var(--acc),var(--pink),var(--gold));z-index:0;opacity:0.6}
+    .founder-photo-wrap::after{content:"";position:absolute;inset:0;border-radius:12px;background:linear-gradient(to bottom,transparent 60%,rgba(5,5,8,0.7));z-index:2;pointer-events:none}
+    .founder-photo{width:420px;height:520px;object-fit:cover;border-radius:12px;display:block;position:relative;z-index:1}
+    .founder-content{display:flex;flex-direction:column}
+    .founder-name{font-family:var(--font-display);font-size:clamp(2rem,3.5vw,2.8rem);font-weight:800;letter-spacing:-0.02em;line-height:1.1;margin-bottom:6px}
+    .founder-title{font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--acc2);margin-bottom:20px}
+    .founder-meta{display:flex;gap:20px;margin-bottom:28px;flex-wrap:wrap}
+    .founder-meta-item{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--txt2)}
+    .founder-meta-icon{font-size:14px}
+    .founder-bio{font-size:1.05rem;color:var(--txt2);line-height:1.8;margin-bottom:36px;max-width:520px}
+    .founder-stats{display:flex;gap:16px;flex-wrap:wrap}
+    .founder-stat-box{background:var(--surface);border:1px solid var(--bdr2);border-radius:var(--r);padding:20px 28px;text-align:center;flex:1;min-width:130px;transition:border-color 0.3s,transform 0.3s}
+    .founder-stat-box:hover{border-color:rgba(124,110,255,0.4);transform:translateY(-3px)}
+    .founder-stat-val{font-family:var(--font-display);font-size:1.6rem;font-weight:800;background:linear-gradient(135deg,var(--acc2),var(--pink));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:6px}
+    .founder-stat-lbl{font-size:11.5px;color:var(--txt2);font-family:var(--font-mono);letter-spacing:0.08em;text-transform:uppercase}
+
+    @media(max-width:1000px){
+      .founder-inner{grid-template-columns:1fr;gap:48px;justify-items:center;text-align:center}
+      .founder-photo{width:100%;max-width:420px;height:480px}
+      .founder-photo-wrap{width:100%;max-width:420px}
+      .founder-photo-wrap::before{inset:-2px}
+      .founder-meta{justify-content:center}
+      .founder-bio{margin-left:auto;margin-right:auto}
+      .founder-stats{justify-content:center}
+    }
+    @media(max-width:600px){
+      .founder-photo{height:380px}
+    }
+
     @media(max-width:900px){
       .nav-links,.btn-nav{display:none}
       .hamburger{display:flex}
@@ -452,6 +485,37 @@
         <div class="why-icon">🌱</div>
         <div class="why-title">Long-Term Partnership</div>
         <div class="why-text">We're not a one-off vendor. We become your ongoing technology partner, growing with your business over time.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOUNDER -->
+<section class="section founder-section" id="founder">
+  <div class="container">
+    <div class="section-badge" style="margin-bottom:48px;display:flex;justify-content:center"><span class="badge">The Founder</span></div>
+    <div class="founder-inner">
+      <div class="founder-photo-wrap reveal-left">
+        <img src="founder.jpeg" alt="Shahid Khan — Founder & CEO, DopeOrca Technologies" class="founder-photo" />
+      </div>
+      <div class="founder-content reveal-right">
+        <h2 class="founder-name">Shahid <span class="grad-text">Khan</span></h2>
+        <div class="founder-title">Founder &amp; CEO, DopeOrca Technologies</div>
+        <div class="founder-meta">
+          <span class="founder-meta-item"><span class="founder-meta-icon">🎂</span>Age 18</span>
+          <span class="founder-meta-item"><span class="founder-meta-icon">📍</span>Mumbai, India</span>
+        </div>
+        <p class="founder-bio">I started DopeOrca at 18 with one belief — that every business deserves a world-class digital presence, regardless of size. We build websites and AI solutions that make businesses impossible to ignore.</p>
+        <div class="founder-stats">
+          <div class="founder-stat-box">
+            <div class="founder-stat-val">4+</div>
+            <div class="founder-stat-lbl">Markets</div>
+          </div>
+          <div class="founder-stat-box">
+            <div class="founder-stat-val">100%</div>
+            <div class="founder-stat-lbl">Client Satisfaction</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
