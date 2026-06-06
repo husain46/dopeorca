@@ -248,6 +248,10 @@
       .founder-photo{height:380px}
     }
 
+    .niche-tag{display:inline-flex;font-size:13px;padding:7px 16px;border-radius:20px;background:var(--surface);border:1px solid var(--bdr2);color:var(--txt2);transition:border-color 0.2s,color 0.2s,background 0.2s}
+    .niche-tag:hover{border-color:rgba(124,110,255,0.4);color:var(--txt);background:var(--surface2)}
+    #nicheSearch::placeholder{color:var(--txt3)}
+
     @media(max-width:900px){
       .nav-links,.btn-nav{display:none}
       .hamburger{display:flex}
@@ -339,20 +343,20 @@
     </div>
     <div class="hero-stats">
       <div class="hero-stat">
-        <div class="hero-stat-num">50+</div>
+        <div class="hero-stat-num">2</div>
         <div class="hero-stat-label">Projects Delivered</div>
       </div>
       <div class="hero-stat">
-        <div class="hero-stat-num">30+</div>
-        <div class="hero-stat-label">Happy Clients</div>
-      </div>
-      <div class="hero-stat">
-        <div class="hero-stat-num">8</div>
-        <div class="hero-stat-label">Core Services</div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Client Satisfaction</div>
       </div>
       <div class="hero-stat">
         <div class="hero-stat-num">4+</div>
-        <div class="hero-stat-label">Countries Served</div>
+        <div class="hero-stat-label">Markets Served</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">May 2026</div>
+        <div class="hero-stat-label">Founded</div>
       </div>
     </div>
   </div>
@@ -522,52 +526,89 @@
 </section>
 
 <!-- INDUSTRIES -->
-<section class="section" style="background:var(--bg2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)">
+<section class="section" id="industries" style="background:var(--bg2);border-top:1px solid var(--bdr);border-bottom:1px solid var(--bdr)">
   <div class="container">
     <div class="section-head reveal" style="text-align:center">
       <div class="section-badge" style="display:flex;justify-content:center"><span class="badge">Industries We Serve</span></div>
-      <h2 class="section-title" style="margin-left:auto;margin-right:auto">Across every<br><span class="grad-text">industry that matters</span></h2>
+      <h2 class="section-title" style="margin-left:auto;margin-right:auto">41 niches across<br><span class="grad-text">4 global markets</span></h2>
+      <p class="section-sub" style="margin:0 auto">We've mapped the highest-opportunity niches in each market we serve. Search yours below.</p>
     </div>
-    <div class="industries-grid">
-      <div class="industry-card reveal">
-        <div class="industry-icon">🏥</div>
-        <div class="industry-name">Healthcare</div>
-        <div class="industry-desc">Clinics, dental, wellness brands</div>
+    <input type="text" id="nicheSearch" placeholder="Search industries..." style="width:100%;max-width:500px;padding:14px 20px;border-radius:10px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#f0eeff;font-size:15px;margin:0 auto 48px;display:block;outline:none;font-family:inherit">
+
+    <div class="market-group" style="margin-bottom:40px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--bdr)">
+        <span style="font-size:26px">🇦🇪</span>
+        <span style="font-family:var(--font-display);font-size:1.05rem;font-weight:700">UAE</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">🍽️</div>
-        <div class="industry-name">Food &amp; Hospitality</div>
-        <div class="industry-desc">Restaurants, cafes, cloud kitchens</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="niche-tag">Medical Aesthetic Centers</span>
+        <span class="niche-tag">Dental Clinics</span>
+        <span class="niche-tag">Tuition &amp; Coaching Centers</span>
+        <span class="niche-tag">Real Estate Agencies</span>
+        <span class="niche-tag">Premium Salons &amp; Spas</span>
+        <span class="niche-tag">Fit-Out Contractors</span>
+        <span class="niche-tag">Hospitals &amp; Polyclinics</span>
+        <span class="niche-tag">Perfume &amp; Luxury Retail</span>
+        <span class="niche-tag">Gold &amp; Jewellery Shops</span>
+        <span class="niche-tag">Wedding Planners &amp; Event Companies</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">💼</div>
-        <div class="industry-name">Professional Services</div>
-        <div class="industry-desc">Law firms, consultancies, agencies</div>
+    </div>
+
+    <div class="market-group" style="margin-bottom:40px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--bdr)">
+        <span style="font-size:26px">🇸🇬</span>
+        <span style="font-family:var(--font-display);font-size:1.05rem;font-weight:700">Singapore</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">🛍️</div>
-        <div class="industry-name">Retail &amp; E-Commerce</div>
-        <div class="industry-desc">Online stores, D2C brands, marketplaces</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="niche-tag">Dental &amp; Medical Aesthetic Clinics</span>
+        <span class="niche-tag">Tuition Centers &amp; Learning Centers</span>
+        <span class="niche-tag">Mechanical &amp; Electrical Engineering Firms</span>
+        <span class="niche-tag">Boutique Gyms &amp; CrossFit Studios</span>
+        <span class="niche-tag">Interior Design &amp; ID Firms</span>
+        <span class="niche-tag">Accounting &amp; Tax Advisory Practices</span>
+        <span class="niche-tag">Immigration &amp; Visa Consultants</span>
+        <span class="niche-tag">F&amp;B Chains &amp; Cafe Groups</span>
+        <span class="niche-tag">Childcare &amp; Preschool Centers</span>
+        <span class="niche-tag">Corporate Training Providers</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">🎓</div>
-        <div class="industry-name">Education &amp; EdTech</div>
-        <div class="industry-desc">Coaching, online learning, institutes</div>
+    </div>
+
+    <div class="market-group" style="margin-bottom:40px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--bdr)">
+        <span style="font-size:26px">🇬🇧</span>
+        <span style="font-family:var(--font-display);font-size:1.05rem;font-weight:700">UK</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">🏗️</div>
-        <div class="industry-name">Real Estate</div>
-        <div class="industry-desc">Developers, brokers, property portals</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="niche-tag">Plumbing &amp; Roofing Contractors</span>
+        <span class="niche-tag">Private GP &amp; Aesthetic Clinics</span>
+        <span class="niche-tag">Solar &amp; Heat Pump Installers</span>
+        <span class="niche-tag">Independent Estate Agencies</span>
+        <span class="niche-tag">Structural Engineers &amp; Surveyors</span>
+        <span class="niche-tag">Private Security &amp; SIA Companies</span>
+        <span class="niche-tag">Driving Schools</span>
+        <span class="niche-tag">Mortgage Brokers &amp; IFAs</span>
+        <span class="niche-tag">Solicitors &amp; Boutique Law Firms</span>
+        <span class="niche-tag">Electricians &amp; Gas Safe Engineers</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">🚗</div>
-        <div class="industry-name">Automotive</div>
-        <div class="industry-desc">Dealers, garages, fleet services</div>
+    </div>
+
+    <div class="market-group">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--bdr)">
+        <span style="font-size:26px">🇨🇦</span>
+        <span style="font-family:var(--font-display);font-size:1.05rem;font-weight:700">Canada</span>
       </div>
-      <div class="industry-card reveal">
-        <div class="industry-icon">🌟</div>
-        <div class="industry-name">Startups &amp; SaaS</div>
-        <div class="industry-desc">Early-stage ventures, product companies</div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <span class="niche-tag">HVAC &amp; Furnace Specialists</span>
+        <span class="niche-tag">Custom Home Builders &amp; Renovation Companies</span>
+        <span class="niche-tag">Physiotherapy &amp; Chiropractic Clinics</span>
+        <span class="niche-tag">Boutique Immigration Law Firms</span>
+        <span class="niche-tag">Landscaping &amp; Snow Removal Companies</span>
+        <span class="niche-tag">Accounting &amp; Bookkeeping Firms</span>
+        <span class="niche-tag">Mortgage Brokers</span>
+        <span class="niche-tag">Home Inspection Services</span>
+        <span class="niche-tag">Tutoring Centers</span>
+        <span class="niche-tag">Commercial Cleaning Companies</span>
+        <span class="niche-tag">Personal Injury Law Firms</span>
       </div>
     </div>
   </div>
@@ -665,16 +706,16 @@
   <div class="container">
     <div class="stats-grid">
       <div class="stat-item reveal">
-        <div class="stat-num grad-text">50+</div>
+        <div class="stat-num grad-text">2</div>
         <div class="stat-label">Projects Delivered</div>
       </div>
       <div class="stat-item reveal">
-        <div class="stat-num grad-text">30+</div>
-        <div class="stat-label">Satisfied Clients</div>
+        <div class="stat-num grad-text">2</div>
+        <div class="stat-label">Happy Clients</div>
       </div>
       <div class="stat-item reveal">
         <div class="stat-num grad-text">4+</div>
-        <div class="stat-label">Countries Served</div>
+        <div class="stat-label">Markets Served</div>
       </div>
       <div class="stat-item reveal">
         <div class="stat-num grad-text">100%</div>
@@ -745,9 +786,7 @@
         </a>
         <p class="footer-desc">Building Websites, Software & AI-Powered Solutions. Your digital growth partner headquartered in Mumbai, India.</p>
         <div class="footer-social">
-          <a href="https://www.linkedin.com/company/dopeorca" class="social-link" aria-label="LinkedIn">in</a>
-          <a href="https://twitter.com/dopeorca" class="social-link" aria-label="Twitter">𝕏</a>
-          <a href="https://instagram.com/dopeorca" class="social-link" aria-label="Instagram">ig</a>
+          <a href="https://www.instagram.com/dopeorcaa/" class="social-link" aria-label="Instagram">ig</a>
         </div>
       </div>
       <div class="footer-col">
@@ -777,12 +816,16 @@
           <a href="mailto:dopeorca7@gmail.com">dopeorca7@gmail.com</a>
         </div>
         <div class="footer-contact-item">
+          <span class="footer-contact-icon">📱</span>
+          <a href="https://wa.me/918779009398">+91 87790 09398</a>
+        </div>
+        <div class="footer-contact-item">
           <span class="footer-contact-icon">📍</span>
           Mumbai, Maharashtra, India
         </div>
         <div class="footer-contact-item">
           <span class="footer-contact-icon">⏰</span>
-          Mon–Sat: 10AM – 7PM IST
+          Available anytime — we respond fast
         </div>
       </div>
     </div>
@@ -833,6 +876,10 @@
       else el.textContent = Math.floor(start) + (el.dataset.suffix || '');
     }, 16);
   }
+
+  // Niche search
+  const ns=document.getElementById('nicheSearch');
+  if(ns){ns.addEventListener('input',function(){const v=this.value.toLowerCase();document.querySelectorAll('.niche-tag').forEach(t=>{t.style.display=t.textContent.toLowerCase().includes(v)?'':'none'});document.querySelectorAll('.market-group').forEach(g=>{const vis=[...g.querySelectorAll('.niche-tag')].some(t=>t.style.display!=='none');g.style.display=vis?'':'none'})});}
 </script>
 </body>
 </html>
