@@ -303,13 +303,23 @@
       section, div, header, footer, nav, main { max-width: 100vw !important; overflow-x: hidden !important; }
     }
 
+      /* PRICING BADGE VISIBILITY */
+      .price-card { overflow: visible !important; }
+      .pricing-grid { overflow: visible !important; }
+      .price-card.featured { margin-top: 20px !important; }
     @media (max-width: 400px) {
       .hero-title { font-size: 1.9rem !important; }
       .section-title { font-size: 1.5rem !important; }
       .hero-stat-num { font-size: 1.5rem !important; }
       .container { padding: 0 12px !important; }
     }
-    /* ========= END NUCLEAR MOBILE FIX ========= */
+    @media (max-width: 480px) {
+      [class*="grid"] { grid-template-columns: repeat(2, 1fr) !important; }
+      .services-grid, .why-grid, .projects-grid, .testimonials-grid, .industries-grid, .learn-grid, .roles-grid { grid-template-columns: 1fr !important; }
+      .stats-grid, .intro-cards, .details-bar { grid-template-columns: 1fr 1fr !important; }
+      .internship-highlights, .highlights-grid, .benefits-grid { grid-template-columns: 1fr !important; }
+      * { min-width: 0 !important; word-break: break-word !important; }
+    }    /* ========= END NUCLEAR MOBILE FIX ========= */
   </style>
 </head>
 <body>
