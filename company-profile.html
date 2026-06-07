@@ -91,7 +91,7 @@
     .svc-mini-icon{font-size:28px;margin-bottom:10px}
     .svc-mini-name{font-family:var(--font-display);font-size:13px;font-weight:700}
     /* MARKETS */
-    .markets-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+    .markets-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
     .market-card{background:var(--surface);border:1px solid var(--bdr);border-radius:var(--r2);padding:28px 20px;text-align:center;transition:border-color 0.3s,transform 0.3s}
     .market-card:hover{border-color:rgba(124,110,255,0.4);transform:translateY(-3px)}
     .market-flag{font-size:40px;margin-bottom:10px}
@@ -524,6 +524,60 @@ img {
 /* ============================================
    END DOPEORCA MOBILE CSS
    ============================================ */
+  
+/* ── HERO / BADGE PADDING FIX ── */
+.hero { padding-top: 100px !important; }
+.hero-inner { padding-top: 20px !important; }
+section:first-of-type { padding-top: 100px !important; }
+.page-hero, .page-header { padding-top: 160px !important; }
+.hero-badge, .page-hero .badge, .page-hero .section-badge,
+section:first-of-type > .container > .badge,
+section:first-of-type > .container > div > .badge { margin-top: 20px !important; }
+
+  
+/* ── MARKETS GRID MOBILE FIX ── */
+@media (max-width: 768px) {
+  .markets-grid,
+  [class*="market"] {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  .market-card, .market-item {
+    width: 100% !important;
+    padding: 20px 16px !important;
+    text-align: center !important;
+  }
+  .market-card h3, .market-card p,
+  .market-name, .market-note {
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+}
+
+  
+/* ── SERVICES SUMMARY GRID MOBILE FIX ── */
+@media (max-width: 768px) {
+  .services-summary {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+  .svc-mini {
+    width: 100% !important;
+    padding: 16px 12px !important;
+    text-align: center !important;
+    min-width: 0 !important;
+  }
+  .svc-mini-name {
+    white-space: normal !important;
+    word-break: normal !important;
+    font-size: 0.8rem !important;
+    line-height: 1.3 !important;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -733,7 +787,7 @@ img {
       <div style="margin-bottom:16px;display:flex;justify-content:center"><span class="badge">Global Reach</span></div>
       <h2 class="section-title" style="margin-left:auto;margin-right:auto">Markets we <span class="grad-text">serve</span></h2>
     </div>
-    <div class="markets-grid" style="grid-template-columns:repeat(5,1fr)">
+    <div class="markets-grid">
       <div class="market-card reveal">
         <div class="market-flag">🇮🇳</div>
         <div class="market-name">India</div>
