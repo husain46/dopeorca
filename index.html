@@ -256,7 +256,7 @@
       .nav-links,.btn-nav{display:none}
       .hamburger{display:flex}
       .hero-stats{border-radius:var(--r)}
-      .hero-stat{padding:20px 24px}
+      .hero-stat{padding:20px 20px}
       .intro-grid{grid-template-columns:1fr;gap:40px}
       .why-grid{grid-template-columns:repeat(2,1fr)}
       .industries-grid{grid-template-columns:repeat(2,1fr)}
@@ -276,6 +276,12 @@
       .stats-grid{grid-template-columns:1fr 1fr}
       .footer-grid{grid-template-columns:1fr}
       .intro-cards{grid-template-columns:1fr}
+      .hero-stats{display:grid;grid-template-columns:1fr 1fr;overflow:hidden}
+      .hero-stat{padding:18px 10px;min-width:0;flex:none;border-right:none;border-bottom:1px solid var(--bdr)}
+      .hero-stat:nth-child(1),.hero-stat:nth-child(3){border-right:1px solid var(--bdr)}
+      .hero-stat:nth-child(3),.hero-stat:nth-child(4){border-bottom:none}
+      .hero-stat-num{font-size:1.8rem}
+      .hero-stat-label{font-size:11px;letter-spacing:0.04em}
     }
   </style>
 </head>
