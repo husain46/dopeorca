@@ -310,6 +310,201 @@
       .internship-highlights, .highlights-grid, .benefits-grid { grid-template-columns: 1fr !important; }
       * { min-width: 0 !important; word-break: break-word !important; }
     }    /* ========= END NUCLEAR MOBILE FIX ========= */
+  
+/* ===== FINAL MOBILE TEXT FIX ===== */
+* {
+  -webkit-hyphens: none !important;
+  hyphens: none !important;
+  overflow-wrap: normal !important;
+  word-break: normal !important;
+}
+
+/* STAT BOXES - fix everywhere */
+.stat-item,
+.stat-card,
+.hero-stat,
+.founder-stat,
+.about-stat,
+.stat-box {
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+
+.stat-num,
+.hero-stat-num,
+.stat-number,
+.founder-stat-num {
+  font-size: clamp(1.4rem, 5vw, 3rem) !important;
+  line-height: 1.1 !important;
+  white-space: nowrap !important;
+  display: block !important;
+}
+
+.stat-label,
+.hero-stat-label,
+.stat-card .stat-label {
+  font-size: clamp(9px, 2.2vw, 12px) !important;
+  white-space: nowrap !important;
+  letter-spacing: 0.05em !important;
+  display: block !important;
+}
+
+@media (max-width: 768px) {
+
+  /* STATS GRIDS - proper sizing */
+  .stats-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+  }
+
+  .stat-item {
+    padding: 28px 12px !important;
+    text-align: center !important;
+  }
+
+  /* HERO STATS */
+  .hero-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+    width: 100% !important;
+  }
+
+  .hero-stat {
+    padding: 20px 8px !important;
+    text-align: center !important;
+    flex: unset !important;
+    min-width: unset !important;
+    border-right: none !important;
+    border-bottom: 1px solid var(--bdr) !important;
+  }
+
+  .hero-stat:nth-child(1),
+  .hero-stat:nth-child(2) {
+    border-bottom: 1px solid var(--bdr) !important;
+  }
+
+  .hero-stat:nth-child(odd) {
+    border-right: 1px solid var(--bdr) !important;
+  }
+
+  /* ABOUT PAGE FOUNDER STATS */
+  .about-stats,
+  .founder-stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  .stat-card {
+    padding: 16px 10px !important;
+    text-align: center !important;
+    flex: unset !important;
+    width: 100% !important;
+  }
+
+  .stat-number {
+    font-size: clamp(1.6rem, 6vw, 2.5rem) !important;
+    white-space: nowrap !important;
+    display: block !important;
+    line-height: 1 !important;
+  }
+
+  .stat-label {
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    margin-top: 4px !important;
+    display: block !important;
+  }
+
+  /* JOURNEY / TIMELINE on about page */
+  .timeline,
+  .journey-timeline {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 24px !important;
+  }
+
+  .timeline-item,
+  .journey-item {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    padding: 20px !important;
+    border-left: 2px solid var(--acc) !important;
+    padding-left: 20px !important;
+  }
+
+  .timeline-year,
+  .journey-year {
+    font-size: 0.85rem !important;
+    white-space: nowrap !important;
+    color: var(--acc2) !important;
+    font-weight: 700 !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    min-width: unset !important;
+    width: auto !important;
+  }
+
+  /* HEADING FIX - prevent word breaks */
+  h1, h2, h3, h4 {
+    word-break: keep-all !important;
+    overflow-wrap: break-word !important;
+    hyphens: none !important;
+  }
+
+  .section-title {
+    font-size: clamp(1.5rem, 5.5vw, 2rem) !important;
+    line-height: 1.2 !important;
+    word-break: keep-all !important;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.4rem) !important;
+    line-height: 1.1 !important;
+    word-break: keep-all !important;
+  }
+
+  /* PREVENT ALL NUMBER BREAKS */
+  [class*="stat"] *,
+  [class*="num"] *,
+  [class*="number"] * {
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+  }
+
+  /* CONTAINER */
+  .container {
+    padding: 0 16px !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .stat-num,
+  .hero-stat-num,
+  .stat-number {
+    font-size: 1.4rem !important;
+  }
+
+  .stat-label,
+  .hero-stat-label {
+    font-size: 9px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .hero-stat {
+    padding: 16px 6px !important;
+  }
+
+  .section-title {
+    font-size: 1.4rem !important;
+  }
+}
+/* ===== END FINAL MOBILE TEXT FIX ===== */
   </style>
 </head>
 <body>
