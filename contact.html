@@ -112,17 +112,41 @@
     .footer-legal a{font-size:12.5px;color:var(--txt3);transition:color 0.2s}
     .footer-legal a:hover{color:var(--txt2)}
     .success-msg{display:none;background:linear-gradient(135deg,rgba(16,185,129,0.1),rgba(16,185,129,0.05));border:1px solid rgba(16,185,129,0.3);border-radius:var(--r);padding:16px 20px;font-size:14px;color:var(--grn);margin-top:16px;text-align:center}
+    /* MOBILE RESPONSIVE */
     @media(max-width:900px){
+      body{overflow-x:hidden}
       .nav-links,.btn-nav{display:none}
       .hamburger{display:flex}
-      .contact-grid{grid-template-columns:1fr;gap:40px}
+      .contact-grid,.contact-layout{grid-template-columns:1fr;gap:40px}
+      .contact-sidebar,.contact-info{order:2}
+      .contact-form-wrap{order:1}
+      .contact-cards-grid,.info-cards{grid-template-columns:repeat(2,1fr)}
       .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
-      .contact-form{padding:32px 24px}
+      .cta-section{padding:48px 28px;margin:0 16px;border-radius:20px}
     }
     @media(max-width:600px){
-      .section{padding:80px 0}
-      .form-row{grid-template-columns:1fr}
-      .footer-grid{grid-template-columns:1fr}
+      body{overflow-x:hidden}
+      .container{padding:0 16px}
+      .section,.section-sm{padding:60px 0}
+      .section-title{font-size:clamp(1.6rem,6vw,2.2rem)}
+      .hero-title,.page-title{font-size:clamp(1.8rem,7vw,2.2rem)}
+      .hero-sub,.page-sub{font-size:1rem;max-width:90%;margin-left:auto;margin-right:auto}
+      .hero-cta,.page-cta{flex-direction:column;align-items:stretch;gap:10px}
+      .btn-primary,.btn-secondary,.form-submit{min-height:48px;justify-content:center;font-size:15px;width:100%;padding:14px 20px;display:flex;box-sizing:border-box}
+      .contact-grid,.contact-layout{grid-template-columns:1fr}
+      .contact-cards-grid,.info-cards{grid-template-columns:1fr}
+      .form-row,.form-grid{grid-template-columns:1fr}
+      .form-group{width:100%}
+      input[type="text"],input[type="email"],input[type="tel"],textarea,select,.form-input,.form-select{width:100%;box-sizing:border-box;font-size:16px}
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+      .footer-social{justify-content:center}
+      .footer-desc{text-align:center;max-width:100%}
+      .footer-bottom{flex-direction:column;text-align:center;gap:12px}
+      .cta-section{padding:40px 20px;margin:0;border-radius:16px}
+      .cta-title{font-size:clamp(1.6rem,6vw,2.2rem)}
+      .cta-btns{flex-direction:column;align-items:stretch;gap:10px}
+      .footer-contact-item{font-size:12px}
+      img{max-width:100%}
     }
   </style>
 </head>

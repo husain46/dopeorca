@@ -120,24 +120,39 @@
     .footer-legal{display:flex;gap:20px}
     .footer-legal a{font-size:12.5px;color:var(--txt3);transition:color 0.2s}
     .footer-legal a:hover{color:var(--txt2)}
+    /* MOBILE RESPONSIVE */
     @media(max-width:900px){
+      body{overflow-x:hidden}
       .nav-links,.btn-nav{display:none}
       .hamburger{display:flex}
-      .learn-grid{grid-template-columns:1fr}
-      .roles-grid{grid-template-columns:1fr}
-      .details-bar{grid-template-columns:repeat(2,1fr)}
-      .detail-item:nth-child(2){border-right:none}
-      .detail-item:nth-child(3){border-top:1px solid var(--bdr)}
-      .detail-item:nth-child(4){border-top:1px solid var(--bdr);border-right:none}
+      .internship-grid,.roles-grid,.perks-grid,.benefits-grid{grid-template-columns:1fr}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .stat-item{border-bottom:1px solid var(--bdr)}
       .footer-grid{grid-template-columns:1fr 1fr;gap:40px}
       .cta-section{padding:48px 28px;margin:0 16px;border-radius:20px}
     }
     @media(max-width:600px){
-      .section{padding:80px 0}
-      .details-bar{grid-template-columns:1fr}
-      .detail-item{border-right:none;border-bottom:1px solid var(--bdr)}
-      .detail-item:last-child{border-bottom:none}
-      .footer-grid{grid-template-columns:1fr}
+      body{overflow-x:hidden}
+      .container{padding:0 16px}
+      .section,.section-sm{padding:60px 0}
+      .section-title{font-size:clamp(1.6rem,6vw,2.2rem)}
+      .hero-title,.page-title{font-size:clamp(1.8rem,7vw,2.2rem)}
+      .hero-sub,.page-sub{font-size:1rem;max-width:90%;margin-left:auto;margin-right:auto}
+      .hero-cta,.page-cta{flex-direction:column;align-items:stretch;gap:10px}
+      .btn-primary,.btn-secondary{min-height:48px;justify-content:center;font-size:15px;width:100%;padding:14px 20px;display:flex}
+      .internship-grid,.roles-grid,.perks-grid,.benefits-grid,.why-grid{grid-template-columns:1fr}
+      .role-card,.perk-card,.benefit-card{width:100%;padding:20px}
+      .role-card a[href*="wa.me"],.role-card .btn-primary{width:100%;min-height:48px;display:flex;justify-content:center;align-items:center;box-sizing:border-box}
+      .stats-grid{grid-template-columns:1fr 1fr}
+      .footer-grid{grid-template-columns:1fr;text-align:center}
+      .footer-social{justify-content:center}
+      .footer-desc{text-align:center;max-width:100%}
+      .footer-bottom{flex-direction:column;text-align:center;gap:12px}
+      .cta-section{padding:40px 20px;margin:0;border-radius:16px}
+      .cta-title{font-size:clamp(1.6rem,6vw,2.2rem)}
+      .cta-btns{flex-direction:column;align-items:stretch;gap:10px}
+      .footer-contact-item{font-size:12px}
+      img{max-width:100%}
     }
   </style>
 </head>
