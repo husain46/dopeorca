@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
@@ -154,6 +154,159 @@
       .footer-contact-item{font-size:12px}
       img{max-width:100%}
     }
+  
+    /* ========= NUCLEAR MOBILE FIX ========= */
+    *, *::before, *::after { box-sizing: border-box !important; }
+    body { overflow-x: hidden !important; width: 100% !important; }
+    img { max-width: 100% !important; height: auto !important; }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 16px !important; max-width: 100% !important; }
+
+      /* NAV */
+      .nav-links, .btn-nav { display: none !important; }
+      .hamburger { display: flex !important; }
+      .nav-inner { padding: 14px 16px !important; }
+
+      /* HERO */
+      .hero-title { font-size: 2.2rem !important; line-height: 1.1 !important; word-break: break-word !important; }
+      .hero-sub { font-size: 1rem !important; padding: 0 8px !important; }
+      .hero-inner { padding: 40px 0 !important; }
+      .hero-cta { flex-direction: column !important; align-items: stretch !important; gap: 12px !important; }
+      .hero-cta a, .hero-cta button { width: 100% !important; text-align: center !important; justify-content: center !important; }
+      .hero-stats { flex-wrap: wrap !important; border-radius: 12px !important; }
+      .hero-stat { flex: 1 1 45% !important; min-width: 45% !important; padding: 20px 12px !important; border-bottom: 1px solid var(--bdr) !important; }
+      .hero-stat-num { font-size: 1.8rem !important; }
+      .hero-stat-label { font-size: 10px !important; }
+
+      /* ALL GRIDS TO 1 COLUMN */
+      .services-grid,
+      .why-grid,
+      .industries-grid,
+      .projects-grid,
+      .testimonials-grid,
+      .intro-cards,
+      .footer-grid,
+      .process-steps,
+      .cards-grid,
+      .why-cards,
+      .values-grid,
+      .team-grid,
+      .openings-list,
+      .internship-grid,
+      .about-grid,
+      .intro-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+        grid-template-columns: unset !important;
+      }
+
+      /* STATS 2x2 */
+      .stats-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        flex-direction: unset !important;
+      }
+      .stat-item { border-right: none !important; border-bottom: 1px solid var(--bdr) !important; padding: 32px 16px !important; }
+
+      /* CARDS */
+      .svc-card, .why-card, .proj-card, .testi-card, .intro-card,
+      .service-card, .industry-card, .stat-item, .process-step,
+      .job-listing, .value-card, .team-card {
+        width: 100% !important;
+        padding: 20px !important;
+      }
+
+      /* FOUNDER / ABOUT PHOTO */
+      .about-grid, .intro-grid { flex-direction: column !important; }
+      .about-photo, .founder-photo {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: 300px !important;
+      }
+      .about-stats {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 10px !important;
+      }
+      .stat-card {
+        flex: 1 1 45% !important;
+        padding: 16px 12px !important;
+        text-align: center !important;
+      }
+
+      /* SECTIONS */
+      .section { padding: 60px 0 !important; }
+      .section-title { font-size: clamp(1.6rem, 6vw, 2.2rem) !important; word-break: break-word !important; }
+      .section-sub { font-size: 0.95rem !important; max-width: 100% !important; }
+
+      /* FORMS */
+      .contact-form, form { width: 100% !important; }
+      input, select, textarea {
+        width: 100% !important;
+        font-size: 16px !important;
+        box-sizing: border-box !important;
+      }
+      .form-row { flex-direction: column !important; gap: 12px !important; }
+      button[type="submit"], .contact-form-submit, .btn-submit, .form-submit {
+        width: 100% !important;
+        min-height: 48px !important;
+      }
+
+      /* CONTACT PAGE */
+      .contact-grid, .contact-layout {
+        flex-direction: column !important;
+        grid-template-columns: unset !important;
+      }
+      .contact-info, .contact-form-wrap { width: 100% !important; }
+
+      /* FOOTER */
+      .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 32px !important;
+      }
+      .footer-inner, .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 12px !important;
+      }
+      .footer-social, .footer-legal { justify-content: center !important; }
+
+      /* PROCESS */
+      .process-steps { flex-direction: column !important; overflow-x: unset !important; }
+      .process-step {
+        flex: unset !important;
+        width: 100% !important;
+        text-align: left !important;
+        padding-left: 20px !important;
+        border-left: 2px solid var(--acc) !important;
+      }
+      .process-step::after { display: none !important; }
+
+      /* CTA */
+      .cta-section { padding: 40px 20px !important; margin: 0 !important; border-radius: 16px !important; }
+      .cta-btns, .contact-buttons, .hero-buttons { flex-direction: column !important; align-items: stretch !important; }
+
+      /* CAREERS */
+      .job-card, .job-listing { flex-direction: column !important; align-items: flex-start !important; gap: 16px !important; }
+      .job-card .btn-primary, .job-listing .btn-primary { width: 100% !important; text-align: center !important; justify-content: center !important; }
+
+      /* MOBILE MENU */
+      .mobile-menu { display: none; }
+      .mobile-menu.open { display: block !important; }
+
+      /* PREVENT ALL OVERFLOW */
+      section, div, header, footer, nav, main { max-width: 100vw !important; overflow-x: hidden !important; }
+    }
+
+    @media (max-width: 400px) {
+      .hero-title { font-size: 1.9rem !important; }
+      .section-title { font-size: 1.5rem !important; }
+      .hero-stat-num { font-size: 1.5rem !important; }
+      .container { padding: 0 12px !important; }
+    }
+    /* ========= END NUCLEAR MOBILE FIX ========= */
   </style>
 </head>
 <body>
