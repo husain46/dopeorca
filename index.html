@@ -680,7 +680,20 @@ section:first-of-type { padding-top: 100px !important; }
 section:first-of-type > .container > .badge,
 section:first-of-type > .container > div > .badge { margin-top: 20px !important; }
 
-  </style>
+  
+/* ── MAY 2026 STAT FIX ── */
+.hero-stat:last-child .hero-stat-num {
+  font-size: clamp(1rem, 2.2vw, 1.8rem) !important;
+  white-space: nowrap !important;
+}
+.hero-stats {
+  overflow: visible !important;
+}
+.hero-stat {
+  min-width: 0 !important;
+  overflow: visible !important;
+}
+</style>
 </head>
 <body>
 
